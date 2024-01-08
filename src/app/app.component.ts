@@ -1,4 +1,4 @@
-import { Component, ViewChild, HostListener } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ButtonModule, ButtonComponent } from '@syncfusion/ej2-angular-buttons';
@@ -12,9 +12,7 @@ import { ButtonModule, ButtonComponent } from '@syncfusion/ej2-angular-buttons';
 })
 export class AppComponent {
   title = 'example';
-  @ViewChild('toggleBtn')
-  public toggleBtn: ButtonComponent | any;
-  @HostListener('click', ['toggleBtn'])  
+  @ViewChild('toggleBtn')  toggleBtn: ButtonComponent | any;   
   btnClick() {
     if(this.toggleBtn.element.classList.contains('e-active'))
     {
